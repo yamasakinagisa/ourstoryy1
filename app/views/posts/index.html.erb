@@ -7,6 +7,7 @@
 
   <body>
   <div class="header">
+
     <div class="header__title">
         <%= link_to "*Our Story*", '/', class: "header__title--text" %>
       </div>
@@ -68,12 +69,13 @@
         <%# <a href="URL"><img src="assets/7J9A1877.素材.jpg"></a> %>
       </div>
         
-      <a href="#">読む</a>
+      <a href="#">新着順</a>
   </div>
 
 <div class="grid">
   <% @posts.each do |post| %>
   <div class="module">
+  <%# <img src="p8134.素材.jpg"> %>
   <%= link_to post.title, post_path(post.id), class: "content__right__top--title" %>
    <%= post.user.nickname %>
   <%# <%= post.created_at %> 
@@ -81,7 +83,6 @@
   <% end %>
   <div class="module">作品のタイトル</div>
   <div class="module">画像入れたい</div>
-  <div class="module">3</div>
 </div>
 
 
