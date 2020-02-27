@@ -1,0 +1,19 @@
+<div class="header">
+
+    <div class="header__title">
+        <%= link_to "*Our Story*", '/', class: "header__title--text" %>
+      </div>
+
+<div class="post">
+  <p><%= @nickname %>さんの投稿一覧</p>
+
+  <div class="grid">
+  <% @posts.each do |post| %>
+  <div class="module">
+  
+  <%= link_to post.title, post_path(post.id), class: "content__right__top--title" %>
+   <%= post.user.nickname %>
+  
+  </div>
+  <% end %>
+</div>
