@@ -15,10 +15,10 @@
     <div class="header-1">
 
     <%# <%= link_to current_user.nickname %> 
-
-        <%= link_to "探す", '#', class: "btn-vertical-border" %>
     <% if user_signed_in? %>
-          <%= link_to "本棚", '#', class: "btn-vertical-border" %>
+          <%= current_user.nickname %>
+          <%= link_to "探す", '#', class: "btn-vertical-border" %>
+          <%= link_to "本棚", '/users/id', class: "btn-vertical-border" %>
           <div class="user_nav btn-vertical-border">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           </div> 
@@ -26,6 +26,7 @@
         <%= link_to "小説をかく", '/posts/new', class: "header__right--btn" %>
       </div>
         <% else %>
+          <%= link_to "探す", '#', class: "btn-vertical-border" %>
           <div class="btn-vertical-border">
             <%= link_to "ログイン", new_user_session_path, class: 'post' %>
           </div>
@@ -88,8 +89,6 @@
 
 
   </div>
-
-
   
   </body>
 </html>
