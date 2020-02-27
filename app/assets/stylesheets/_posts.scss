@@ -1,0 +1,245 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+*{
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+}
+
+
+
+
+.header{
+  height: 90px;
+  // border-bottom:20px solid #ffa500;
+  background-color:#F6AFAA;
+  color: #ffffff;
+  font-size:  40px; 
+  // border-bottom-style: solid;
+  border-color: gray;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  text-decoration: none;
+  &-1 {
+    // text-align: center;
+    font-size: 18px;
+    float: right;
+    margin: 5px;
+    
+  }
+  a {
+    color:#FCECEA;
+    }
+  &__title{
+    width: 300px;
+  }
+}
+
+
+.carousel {
+  padding: 30px;
+  margin: 0 auto;
+  width: 1400px;
+  height: 700px;
+  
+}
+
+.d-block {
+  width: 1300px;
+  height: 700px;
+}
+
+
+// .main{
+//   background-color:#afedfa;
+//   height: 100vh;
+//   width: 540px;
+//   padding: 10px;
+//   &-con{
+//     height: 100px;
+//     width: 100px;
+//     background-color: gray;
+//     border: double 5px white;
+//     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+//   }
+// }
+
+
+.main{
+
+}
+
+
+
+
+// 消したやつmenu
+// .side{
+  
+//   // width: 300px;
+//   // background-color: #fffafa;
+//   // float: left;
+//   margin: 30px;
+//   // border: dashed 2px #afedfa;
+//   position:absolute; top:90px; left:0; z-index: 1;
+//   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+// }
+
+
+
+
+
+
+// ログアウトボタン
+.btn-vertical-border {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 5px 11px 5px 15px;
+  text-decoration: none;
+  color: #928484;
+  transition: .4s;
+  a {
+    color:#928484;
+  }
+}
+
+.btn-vertical-border:before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  background:#928484;
+
+}
+
+.btn-vertical-border:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 4px;
+  height: 100%;
+  top:0;
+  left: 100%;
+  border-radius: 3px;
+  background:#928484;
+  
+}
+
+.btn-vertical-border:hover:before, .btn-vertical-border:hover:after {
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+
+
+.content__title{
+  
+}
+
+
+// タイトルのところ
+input[type='text']{
+  width: 100%;
+  max-width: 400px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+// 本文のところ
+textarea{
+  width: 100%;
+  height: 300px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+// 送信ボタン
+input[type='submit']{
+  border: none;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+
+// 作品一覧デザイン
+.grid {
+  /* Grid Fallback */
+  display: flex;
+  flex-wrap: wrap;
+  color: #928484;
+  /* Supports Grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 1em;
+  a {
+    color:#EE817B;
+  }
+}
+ 
+.module {
+  /* Demo-Specific Styles */
+  background: #FCECEA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  
+  /* Flex Fallback */
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1 1 200px;
+}
+ 
+/* If Grid is supported, remove the margin we set for the fallback */
+@supports (display: grid) {
+  .module {
+    margin: 0;
+  }
+}
+
+
+
+.post{
+  margin: 100px;
+  color: #928484;
+  &__Title{
+   font-size: 30px;
+   margin: 10px;
+  }
+  font-size: 20px;
+}

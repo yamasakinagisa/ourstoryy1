@@ -1,0 +1,41 @@
+<div class="header">
+<div class="header__title">
+        <%= link_to "*Our Story*", '/', class: "header__title--text" %>
+      </div>
+<%# <div class="content__title"> %>
+</div>
+
+<div class="btn-vertical-border">
+  小説の新規投稿
+</div>
+
+<div class="box">
+<%= form_with model: @post, class: :form, local: true do |form| %>
+  <%= form.text_field :title, placeholder: :タイトル, class: :form__title %>
+  <%= form.text_area :content, placeholder: :本文, class: :form__text %>
+  <%= form.submit '投稿する', class: :form__btn %>
+<% end %>
+</div>
+
+
+<%# <div class="box">
+  <span class="item-name">タイトル</span>
+
+  <div class="text-wrap">
+    <input type="text" name="" value="">
+  </div>
+</div>
+
+
+<div class="box">
+  <span class="item-name">本文</span>
+
+  <div class="textarea-wrap">
+    <textarea name="name" rows="8" cols="80"></textarea>
+  </div>
+</div>
+
+
+<div class="submit-wrap">
+  <input type="submit" name="" value="投稿する">
+</div> %>
