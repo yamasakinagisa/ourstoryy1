@@ -6,6 +6,9 @@
   </head>
 
   <body>
+
+
+  
   <div class="header">
 
     <div class="header__title">
@@ -18,7 +21,10 @@
     <%# <%= link_to current_user.nickname %> 
     <% if user_signed_in? %>
           <%= current_user.nickname %>
-          <%= link_to "探す", '#', class: "btn-vertical-border" %>
+          <%# <%= link_to "探す", '#', class: "btn-vertical-border" %> 
+          <div class="btn-vertical-border">
+            <a href="#sbtn4">探す</a>
+          </div>
           <%= link_to "本棚", '/users/id', class: "btn-vertical-border" %>
           <div class="user_nav btn-vertical-border">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
