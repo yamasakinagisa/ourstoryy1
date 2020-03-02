@@ -33,7 +33,9 @@
         <%= link_to "小説をかく", '/posts/new', class: "header__right--btn" %>
       </div>
         <% else %>
-          <%= link_to "探す", '#', class: "btn-vertical-border" %>
+        <div class="btn-vertical-border">
+            <a href="#sbtn4">探す</a>
+          </div>
           <div class="btn-vertical-border">
             <%= link_to "ログイン", new_user_session_path, class: 'post' %>
           </div>
